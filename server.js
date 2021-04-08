@@ -14,10 +14,10 @@ const PORT = process.env.PORT || 3000;
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use("/Develop/assets", express.static("./assets"));
+app.use("/assets", express.static("./assets"));
 
-require("./Develop/assets/js/html-routes")(app);
-require("./Develop/assets/js/api-routes")(app);
+require("./assets/js/html-routes")(app);
+require("./assets/js/api-routes")(app);
 
 // Routes
 // =============================================================
